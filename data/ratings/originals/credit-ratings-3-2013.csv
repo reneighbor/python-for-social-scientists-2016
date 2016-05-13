@@ -1,0 +1,141 @@
+ISO code,Country,S&P Rating,S&P Outlook,Moody's rating,Moody's Outlook,Fitch Rating,Fitch Outlook
+IL,Israel,A+,STA,A1,STA,A,STA
+PL,Poland,A-,STA,A2,STA,A-,POS
+MY,Malaysia,A-,STA,A3,STA,A-,STA
+SI,Slovenia,A-,STA,Baa2,NEG,A-,NEG
+IT,Italy,BBB+,NEG,Baa2,NEG,A-,NEG
+CZ,Czech Republic,AA-,STA,A1,STA,A+,STA
+EE,Estonia,AA-,STA,A1,STA,A+,STA
+SK,Slovakia,A,STA,A2,NEG,A+,STA
+MT,Malta,BBB+,STA,A3,NEG,A+,STA
+CL,Chile,AA-,STA,Aa3,STA,A+,STA
+CN,China,AA-,STA,Aa3,POS,A+,STA
+JP,Japan,AA-,NEG,Aa3,STA,A+,NEG
+SY,Taiwan,AA-,STA,Aa3,STA,A+,STA
+KW,Kuwait,AA,STA,Aa2,STA,AA,STA
+BM,Bermuda,AA-,STA,Aa2,STA,AA,STA
+AE,United Arab Emirates,,,Aa2,STA,AA,STA
+BE,Belgium,AA,NEG,Aa3,NEG,AA,STA
+NZ,New Zealand,AA,STA,Aaa,STA,AA,STA
+SA,Saudi Arabia,AA-,STA,Aa3,STA,AA-,STA
+HK,Hong Kong,AAA,STA,Aa1,POS,AA+,STA
+FR,France,AA+,NEG,Aa1,NEG,AAA,NEG
+GB,United Kingdom,AAA,NEG,Aa1,STA,AAA,NEG
+AT,Austria,AA+,STA,Aaa,NEG,AAA,STA
+AU,Australia,AAA,STA,Aaa,STA,AAA,STA
+CA,Canada,AAA,STA,Aaa,STA,AAA,STA
+DK,Denmark,AAA,STA,Aaa,STA,AAA,STA
+FI,Finland,AAA,STA,Aaa,STA,AAA,STA
+DE,Germany,AAA,STA,Aaa,NEG,AAA,STA
+LU,Luxembourg,AAA,STA,Aaa,NEG,AAA,STA
+NL,Netherlands,AAA,NEG,Aaa,NEG,AAA,NEG
+NO,Norway,AAA,STA,Aaa,STA,AAA,STA
+SG,Singapore,AAA,STA,Aaa,STA,AAA,STA
+SE,Sweden,AAA,STA,Aaa,STA,AAA,STA
+CH,Switzerland,AAA,STA,Aaa,STA,AAA,STA
+LB,Lebanon,B,NEG,B1,STA,B,STA
+DO,Dominican Republic,B+,STA,B1,STA,B,STA
+UA,Ukraine,B,NEG,B3,NEG,B,STA
+EG,Egypt,B-,NEG,B3,RUR,B,NEG
+CY,Cyprus,CCC+,NEG,Caa3,NEG,B,NEG
+CM,Cameroon,B,STA,,,B,STA
+RW,Rwanda,B,STA,,,B,STA
+MZ,Mozambique,B+,STA,,,B,POS
+UG,Uganda,B+,NEG,,,B,STA
+SC,Seychelles,,,,,B,POS
+EC,Ecuador,B,STA,Caa1,STA,B-,POS
+GH,Ghana,B,STA,B1,STA,B+,NEG
+KE,Kenya,B+,STA,B1,STA,B+,STA
+ZW,Zambia,B+,STA,B1,STA,B+,NEG
+MN,Mongolia,BB-,STA,B1,STA,B+,STA
+VU,Venezuela,B+,STA,B2,NEG,B+,NEG
+VN,Vietnam,BB-,STA,B2,STA,B+,STA
+CV,Cape Verde,B+,STA,,,B+,STA
+SV,El Salvador,BB-,NEG,Ba3,STA,BB,NEG
+LK,Sri Lanka,B+,STA,B1,POS,BB-,STA
+AM,Armenia,,,Ba2,NEG,BB-,STA
+AO,Angola,BB-,STA,Ba3,POS,BB-,POS
+BT,Bolivia,BB-,STA,Ba3,STA,BB-,STA
+GE,Georgia,BB-,STA,Ba3,STA,BB-,STA
+NG,Nigeria,BB-,STA,Ba3,STA,BB-,STA
+PY,Paraguay,BB-,STA,Ba3,STA,BB-,STA
+SR,Suriname,BB-,STA,Ba3,POS,BB-,STA
+GA,Gabon,BB-,NEG,,,BB-,POS
+RS,Serbia,BB-,NEG,,,BB-,NEG
+GT,Guatemala,BB,STA,Ba1,STA,BB+,STA
+HU,Hungary,BB,STA,Ba1,NEG,BB+,STA
+PH,Philippines,BB+,POS,Ba1,STA,BB+,STA
+PT,Portugal,BB,NEG,Ba3,NEG,BB+,NEG
+CR,Costa Rica,BB,STA,Baa3,STA,BB+,STA
+TN,Tunisia,BB-,NEG,Baa3,NEG,BB+,NEG
+UY,Uruguay,BBB-,STA,Baa3,POS,BB+,POS
+MKD,Macedonia,BB,STA,,,BB+,STA
+BH,Bahrain,BBB,STA,Baa1,NEG,BBB,STA
+LT,Lithuania,BBB,STA,Baa1,STA,BBB,STA
+MX,Mexico,BBB,STA,Baa1,STA,BBB,STA
+RO,Russia,BBB,STA,Baa1,STA,BBB,STA
+ZA,South Africa,BBB,NEG,Baa1,NEG,BBB,STA
+TH,Thailand,BBB+,STA,Baa1,STA,BBB,STA
+BR,Brazil,BBB,STA,Baa2,POS,BBB,STA
+PA,Panama,BBB,STA,Baa2,STA,BBB,STA
+PE,Peru,BBB,POS,Baa2,POS,BBB,STA
+LV,Latvia,BBB,POS,Baa3,POS,BBB,POS
+IS,Iceland,BBB-,STA,Baa3,STA,BBB,STA
+ES,Spain,BBB-,NEG,Baa3,NEG,BBB,NEG
+AW,Aruba,A-,NEG,,,BBB,STA
+TR,Turkey,BB,STA,Ba1,POS,BBB-,STA
+HR,Croatia,BB+,STA,Ba1,STA,BBB-,NEG
+MA,Morocco,BBB-,NEG,Ba1,NEG,BBB-,STA
+BG,Bulgaria,BBB,STA,Baa2,STA,BBB-,STA
+ID,Indonesia,BB+,POS,Baa3,STA,BBB-,STA
+RO,Romania,BB+,STA,Baa3,NEG,BBB-,STA
+AZ,Azerbaijan,BBB-,STA,Baa3,STA,BBB-,STA
+CO,Colombia,BBB-,POS,Baa3,STA,BBB-,STA
+IN,India,BBB-,NEG,Baa3,STA,BBB-,NEG
+IE,Ireland,BBB+,STA,Ba1,NEG,BBB+,STA
+KZ,Kazakhstan,BBB+,STA,Baa2,STA,BBB+,STA
+AR,Argentina,B-,NEG,B3,NEG,CC,NEG
+GR,Greece,B-,STA,C,,CCC,
+JM,Jamaica,SD,NM,B3,RUR,RD,
+OM,Oman,A,STA,A1,STA,,
+BW,Botswana,A-,STA,A2,STA,,
+QA,Qatar,AA,STA,Aa2,STA,,
+KP,Korea,A+,STA,Aa3,STA,,
+CYM,Cayman Islands,,,Aa3,STA,,
+MO,Macao,,,Aa3,STA,,
+IM,Isle of Man,AA+,STA,Aaa,STA,,
+US,United States of America,AA+,NEG,Aaa,NEG,,
+FJ,Fiji,B,STA,B1,STA,,
+AL,Albania,B+,STA,B1,STA,,
+PG,Papua New Guinea,B+,STA,B1,STA,,
+SN,Senegal,B+,NEG,B1,STA,,
+KH,Cambodia,B,STA,B2,STA,,
+HN,Honduras,B+,STA,B2,STA,,
+VC,St. Vincent & the Grenadines,,,B2,STA,,
+BA,Bosnia and Herzegovina,B,STA,B3,STA,,
+BY,Belarus,B-,STA,B3,NEG,,
+MDA,Moldova,,,B3,STA,,
+NI,Nicaragua,,,B3,STA,,
+BB,Barbados,BB+,STA,Ba1,NEG,,
+JO,Jordan,BB,NEG,Ba2,NEG,,
+BD,Bangladesh,BB-,STA,Ba3,STA,,
+ME,Montenegro,BB-,STA,Ba3,STA,,
+TO,Trinidad and Tobago,A,STA,Baa1,STA,,
+BS,Bahamas,BBB,NEG,Baa1,NEG,,
+MUS,Mauritius,,,Baa1,STA,,
+SX,St. Maarten,,,Baa1,STA,,
+NA,Namibia,,,Baa3,STA,,
+BZ,Belize,SD,NM,Ca,NEG,,
+PK,Pakistan,B-,STA,Caa1,NEG,,
+CU,Cuba,,,Caa1,STA,,
+AD,Andorra,A-,NEG,,,,
+LI,Liechtenstein,AAA,STA,,,,
+BJ,Benin,B,NEG,,,,
+BF,Burkina Faso,B,STA,,,,
+CK,Cook Islands,B+,STA,,,,
+MS,Montserrat,BBB-,STA,,,,
+GD,Grenada,CCC+,NEG,,,,
+GG,Guernsey,,,,,,
+LY,Libya,,,,,,
+ML,Mali,,,,,,
+,"Red: junk, Orange: under observation, Green: top notch",,,,,,
