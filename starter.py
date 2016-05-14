@@ -4,9 +4,9 @@
 
 import csv
 
-f = open('data/worldbank/originals/debt-gdp-percentage.csv', 'rU')
+f = open('data/originals/sample.csv', 'rU')
 
 reader = csv.DictReader(f)
 
 for row in reader:
-	print row
+	print row 
