@@ -40,7 +40,8 @@ PART ONE
 
 1. (From in `starter.py`). Read in this file using csv DictReader, print each row:
 		
-	
+
+```python
 	import csv
 
 	f = open('data/originals/sample.csv', 'rU')
@@ -51,11 +52,11 @@ PART ONE
 		print row
 
 	print "Success!"
-
+```
 
 1. (Copy/paste). Make use of dictionary structure to access values by key:
 
-	
+```python
 	import csv
 
 	f = open('data/originals/sample.csv', 'rU')
@@ -67,12 +68,12 @@ PART ONE
 		print row["2013"]
 
 	print "Success!"
-
+```
 
 
 1. Do the same for large data set. First, delete lines 1-4 in `data/originals/debt-gdp-percentage.csv`. Then, run the code below:
 
-
+```python
 	import csv
 
 	f = open('data/originals/debt-gdp-percentage.csv', 'rU')
@@ -84,14 +85,14 @@ PART ONE
 		print row["2013"]
 
 	print "Success!"
-
+```
 
 
 1. We want to remove all columns but country code and years. Actually, we want to preserve original data file- make a NEW file of only relevant columns. `DictReader` was a class to read CSV files. `DictWriter` is what we'll use.
 
 1. `DictReader` class took file handler. `DictWriter` class takes handler for file destination, **and** `fields` (column headers), as well as optional params:
 
-
+```python
 	import csv
 
 	freader = open('data/originals/debt-gdp-percentage.csv', 'rU')
@@ -111,13 +112,13 @@ PART ONE
 		writer.writerow(row)
 
 	print "Success!"
-
+```
 
 1. Open the new file up in Google Drive, validate it looks as expected.
 
 1. We want to stop doing the manual having to skip first 4 lines lines. `freader` is just a pointer to file/data, so use it to skip lines:
 
-
+```python
 	import csv 
 
 	def skip_lines(fp, numlines):	
@@ -144,14 +145,14 @@ PART ONE
 		writer.writerow(row)
 
 	print "Success!"
-
+```
 
 
 1. Do the same for a different indicator. Q: What would change compared to above? A: Just the filename.
 
 1. Make it a function:
 
-
+```python
 	import csv 
 
 	def skip_lines(fp, numlines):	
@@ -177,9 +178,10 @@ PART ONE
 
 		for row in reader:
 			writer.writerow(row)
+```
+1. And in your `starter.py`:
 
-
-
+```python
 	inflation_input = "data/originals/inflation-gdp-percentage.csv"
 	inflation_output = "data/output/inflation-gdp-percentage.csv"
 
@@ -190,7 +192,7 @@ PART ONE
 	standardize_tables(debt_input, debt_output)
 
 	print "Success!"
-
+```
 
 
 1. Great! What did we do? 
@@ -208,14 +210,13 @@ PART ONE
 1. Make it a module! Then your `starter.py` script becomes very simple, only imports and uses our module.
 
 1. In order to make our code a module, we need to:
-
 * Add `Class()` declaration
 * Add `self` argument to method calls
 * Add `self` to method call for `skip_lines`
 
 1. Make a new file, `wb_standardizer.py`, and paste in this code:
 
-
+```python
 	import csv 
 
 	class WBStandardizer():
@@ -243,11 +244,12 @@ PART ONE
 
 			for row in reader:
 				writer.writerow(row)
-
+```
 
 
 1. Change your `starter.py`:
 
+```python
 	from wb_standardizer import WBStandardizer
 
 
@@ -264,7 +266,7 @@ PART ONE
 	wb.standardize_tables(debt_input, debt_output)
 
 	print "Success!"
-
+```
 
 1. Considerations: Note that starter.py has all the specific context about file location.
 
@@ -294,43 +296,45 @@ Google "python country code converstion", find `pycountry`,
 let's read it together.
 
 1. Copy/paste from the sample code into your `starter.py` (comment out the other stuff):
-		
+	
+```python
 	import pycountry
 	germany = pycountry.countries.get(alpha2='DE')
 	print germany.alpha3
-
+```
 
 1. Validate that pycountry does what you want. (Copy/paste):
 	
+```python
 	import pycountry
 
 	germany = pycountry.countries.get(alpha2='DE')
 
 	alpha3 = germany.alpha3
 	alpha2 = germany.alpha2
-
+```
 
 1. OK. Now that we've validated that this works, what kind of function do we want to write?
 
 1. We want to write a function where argument is one type (alpha3), output is other type (alpha2).
 
-	
+```python	
 	def translate_country_code(self, alpha3_code):
 		country = pycountry.countries.get(alpha3=alpha3_code)
 		return country.alpha2
-
+```
 
 
 1. Handle case where there is no match:
 	
-	
+```python
 	def translate_country_code(self, alpha3_code):
 		try:
 			country = pycountry.countries.get(alpha3=alpha3_code)
 			return country.alpha2
 		except:
 			return "**"
-			
+```			
 
 
 1. Ok we've found a source to translate country codes and made a
@@ -340,7 +344,7 @@ let's read it together.
 
 1. We will replace country code before writing it.
 
-
+```python
 	import csv
 	import pycountry
 
@@ -376,7 +380,7 @@ let's read it together.
 					return country.alpha2
 				except:
 					return "**"
-
+```
 
 
 1. Credit ratings. What do you need to do to standardize it?
