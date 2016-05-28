@@ -196,10 +196,10 @@ PART ONE
 
 
 1. Great! What did we do? 
-* 	Input a csv file to python 
-*	Re-wrote file to only include relevant columns 
-* 	Went from deleting top 4 lines manually to writing a function
-* 	Made re-writing a reusable function for other files from this source
+	* 	Input a csv file to python 
+	*	Re-wrote file to only include relevant columns 
+	* 	Went from deleting top 4 lines manually to writing a function
+	* 	Made re-writing a reusable function for other files from this source
 
 1. Now, let's say we're a researcher and we want to share this code with colleague down the hall. 
 
@@ -210,9 +210,9 @@ PART ONE
 1. Make it a module! Then your `starter.py` script becomes very simple, only imports and uses our module.
 
 1. In order to make our code a module, we need to:
-* Add `Class()` declaration
-* Add `self` argument to method calls
-* Add `self` to method call for `skip_lines`
+	* Add `Class()` declaration
+	* Add `self` argument to method calls
+	* Add `self` to method call for `skip_lines`
 
 1. Make a new file, `wb_standardizer.py`, and paste in this code:
 
@@ -281,12 +281,12 @@ PART TWO
 --------
 
 1. What did we do before break?
-* Looked at data in human-friendly interface (Github, Excel).
-* Read in file and looked at output using Python.
-* Removed columns using Python (actually wrote new file).
-* Removed first 4 lines using Python (also new file).
-* Made our code a function.
-* Made our code a module.
+	* Looked at data in human-friendly interface (Github, Excel).
+	* Read in file and looked at output using Python.
+	* Removed columns using Python (actually wrote new file).
+	* Removed first 4 lines using Python (also new file).
+	* Made our code a function.
+	* Made our code a module.
 
 1. We want to also examine Moody's data on credit ratings.
 What challenge do we face if we merge this table with the others?
@@ -384,8 +384,8 @@ let's read it together.
 
 
 1. Credit ratings. What do you need to do to standardize it?
-* Skip lines - no
-* Delete non-useful columns? yes
-* Translate country code? no
+	* Skip lines - no
+	* Delete non-useful columns? yes
+	* Translate country code? no
 
 1. Should be able to write standardizer class for ratings, as a review. Do it with your partner.
