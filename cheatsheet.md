@@ -388,3 +388,28 @@ class WBStandardizer():
 	* Translate country code? no
 
 1. Should be able to write standardizer class for ratings, as a review. Do it with your partner.
+
+1. If we have time / on your own: How would we merge two tables into one? Let's say we want a table for all countries with the following colummns:
+
+* Country Code
+* 2012 Debt %
+* 2013 Inflation %
+* 2013 Debt %
+* 2013 Inflation %
+* Moody's rating
+* S&P Rating
+* Fitch Rating
+
+1. What are the steps we'd need to do?
+
+CONCLUSION
+----------
+
+1. I hope you've become more comfortable taking basic Python knowledge and using it for a practical task.
+
+1. I hope you're comfortable writing your code as re-usable modules that you can import and share.
+
+1. I hope you're comfortable looking up 3rd-party modules online and vetting them.
+
+1. Feel free to ask me any questions. Good luck!
+renee.achu@gmail.com
