@@ -38,53 +38,53 @@ PART ONE
 
 1. Note: During this lesson it's OK to just copy/paste the code samples. Implementation details do matter, but we'll be able to cover more ground if we focus more on overall trends.
 
-1. (From in `starter.py`). Read in this file using csv DictReader, print each row:
+1. (Opening up `starter.py`). Read in this file using csv DictReader, print each row:
 		
 
 ```python
-	import csv
+import csv
 
-	f = open('data/originals/sample.csv', 'rU')
+f = open('data/originals/sample.csv', 'rU')
 
-	reader = csv.DictReader(f)
+reader = csv.DictReader(f)
 
-	for row in reader:
-		print row
+for row in reader:
+	print row
 
-	print "Success!"
+print "Success!"
 ```
 
-1. (Copy/paste). Make use of dictionary structure to access values by key:
+1. (Copy/paste over existing contents of `starter.py`). Make use of dictionary structure to access values by key:
 
 ```python
-	import csv
+import csv
 
-	f = open('data/originals/sample.csv', 'rU')
+f = open('data/originals/sample.csv', 'rU')
 
-	reader = csv.DictReader(f)
+reader = csv.DictReader(f)
 
-	for row in reader:
-		print row["Country Code"]
-		print row["2013"]
+for row in reader:
+	print row["Country Code"]
+	print row["2013"]
 
-	print "Success!"
+print "Success!"
 ```
 
 
 1. Do the same for large data set. First, delete lines 1-4 in `data/originals/debt-gdp-percentage.csv`. Then, run the code below:
 
 ```python
-	import csv
+import csv
 
-	f = open('data/originals/debt-gdp-percentage.csv', 'rU')
+f = open('data/originals/debt-gdp-percentage.csv', 'rU')
 
-	reader = csv.DictReader(f)
+reader = csv.DictReader(f)
 
-	for row in reader:
-		print row["Country Code"]
-		print row["2013"]
+for row in reader:
+	print row["Country Code"]
+	print row["2013"]
 
-	print "Success!"
+print "Success!"
 ```
 
 
@@ -93,58 +93,60 @@ PART ONE
 1. `DictReader` class took file handler. `DictWriter` class takes handler for file destination, **and** `fields` (column headers), as well as optional params:
 
 ```python
-	import csv
+import csv
 
-	freader = open('data/originals/debt-gdp-percentage.csv', 'rU')
-	fwriter = open('data/output/debt-gdp-percentage.csv', 'w')
+freader = open('data/originals/debt-gdp-percentage.csv', 'rU')
+fwriter = open('data/output/debt-gdp-percentage.csv', 'w')
 
-	fields = ["Country Code"]
+fields = ["Country Code"]
 
-	for year in range(1960, 2015):
-		fields.append(str(year))
+for year in range(1960, 2015):
+	fields.append(str(year))
 
-	reader = csv.DictReader(freader)
-	writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
+reader = csv.DictReader(freader)
+writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
 
-	writer.writeheader()
+writer.writeheader()
 
-	for row in reader:
-		writer.writerow(row)
+for row in reader:
+	writer.writerow(row)
 
-	print "Success!"
+print "Success!"
 ```
 
 1. Open the new file up in Google Drive, validate it looks as expected.
 
-1. We want to stop doing the manual having to skip first 4 lines lines. `freader` is just a pointer to file/data, so use it to skip lines:
+1. We want to stop doing the manual having to skip first 4 lines lines. `freader` is just a pointer to file/data, so use it to skip lines.
+
+1. Undo (and save) the first 4 lines deletions you did to `data/originals/debt-gdp-percentage.csv`, delete 'data/output/debt-gdp-percentage.csv', and run the following code in `starter.py`:
 
 ```python
-	import csv 
+import csv 
 
-	def skip_lines(fp, numlines):	
-			for i in range(numlines):
-			    fp.next()
+def skip_lines(fp, numlines):	
+		for i in range(numlines):
+		    fp.next()
 
 
-	freader = open("data/originals/debt-gdp-percentage.csv", 'rU')
-	skip_lines(freader, 4)
+freader = open("data/originals/debt-gdp-percentage.csv", 'rU')
+skip_lines(freader, 4)
 
-	fwriter = open("data/output/debt-gdp-percentage.csv", 'w')
+fwriter = open("data/output/debt-gdp-percentage.csv", 'w')
 
-	fields = ["Country Code"]
+fields = ["Country Code"]
 
-	for year in range(1960, 2015):
-		fields.append(str(year))
+for year in range(1960, 2015):
+	fields.append(str(year))
 
-	reader = csv.DictReader(freader)
-	writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
+reader = csv.DictReader(freader)
+writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
 
-	writer.writeheader()
+writer.writeheader()
 
-	for row in reader:
-		writer.writerow(row)
+for row in reader:
+	writer.writerow(row)
 
-	print "Success!"
+print "Success!"
 ```
 
 
@@ -153,45 +155,42 @@ PART ONE
 1. Make it a function:
 
 ```python
-	import csv 
+import csv 
 
-	def skip_lines(fp, numlines):	
-			for i in range(numlines):
-			    fp.next()
+def skip_lines(fp, numlines):	
+		for i in range(numlines):
+		    fp.next()
 
 
-	def standardize_tables(inpath, outpath):
-		freader = open(inpath, 'rU')
-		skip_lines(freader, 4)
+def standardize_tables(inpath, outpath):
+	freader = open(inpath, 'rU')
+	skip_lines(freader, 4)
 
-		fwriter = open(outpath, 'w')
+	fwriter = open(outpath, 'w')
 
-		fields = ["Country Code"]
+	fields = ["Country Code"]
 
-		for year in range(1960, 2015):
-			fields.append(str(year))
+	for year in range(1960, 2015):
+		fields.append(str(year))
 
-		reader = csv.DictReader(freader)
-		writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
+	reader = csv.DictReader(freader)
+	writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
 
-		writer.writeheader()
+	writer.writeheader()
 
-		for row in reader:
-			writer.writerow(row)
-```
-1. And in your `starter.py`:
+	for row in reader:
+		writer.writerow(row)
 
-```python
-	inflation_input = "data/originals/inflation-gdp-percentage.csv"
-	inflation_output = "data/output/inflation-gdp-percentage.csv"
+inflation_input = "data/originals/inflation-gdp-percentage.csv"
+inflation_output = "data/output/inflation-gdp-percentage.csv"
 
-	debt_input = "data/originals/debt-gdp-percentage.csv"
-	debt_output = "data/output/debt-gdp-percentage.csv"
+debt_input = "data/originals/debt-gdp-percentage.csv"
+debt_output = "data/output/debt-gdp-percentage.csv"
 
-	standardize_tables(inflation_input, inflation_output)
-	standardize_tables(debt_input, debt_output)
+standardize_tables(inflation_input, inflation_output)
+standardize_tables(debt_input, debt_output)
 
-	print "Success!"
+print "Success!"
 ```
 
 
@@ -217,55 +216,55 @@ PART ONE
 1. Make a new file, `wb_standardizer.py`, and paste in this code:
 
 ```python
-	import csv 
+import csv 
 
-	class WBStandardizer():
+class WBStandardizer():
 
-		def skip_lines(self, fp, numlines):	
-				for i in range(numlines):
-				    fp.next()
+	def skip_lines(self, fp, numlines):	
+			for i in range(numlines):
+			    fp.next()
 
 
-		def standardize_tables(self, inpath, outpath):
-			freader = open(inpath, 'rU')
-			self.skip_lines(freader, 4)
+	def standardize_tables(self, inpath, outpath):
+		freader = open(inpath, 'rU')
+		self.skip_lines(freader, 4)
 
-			fwriter = open(outpath, 'w')
+		fwriter = open(outpath, 'w')
 
-			fields = ["Country Code"]
+		fields = ["Country Code"]
 
-			for year in range(1960, 2015):
-				fields.append(str(year))
+		for year in range(1960, 2015):
+			fields.append(str(year))
 
-			reader = csv.DictReader(freader)
-			writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
+		reader = csv.DictReader(freader)
+		writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
 
-			writer.writeheader()
+		writer.writeheader()
 
-			for row in reader:
-				writer.writerow(row)
+		for row in reader:
+			writer.writerow(row)
 ```
 
 
 1. Change your `starter.py`:
 
 ```python
-	from wb_standardizer import WBStandardizer
+from wb_standardizer import WBStandardizer
 
 
-	inflation_input = "data/originals/inflation-gdp-percentage.csv"
-	inflation_output = "data/output/inflation-gdp-percentage.csv"
+inflation_input = "data/originals/inflation-gdp-percentage.csv"
+inflation_output = "data/output/inflation-gdp-percentage.csv"
 
-	debt_input = "data/originals/debt-gdp-percentage.csv"
-	debt_output = "data/output/debt-gdp-percentage.csv"
+debt_input = "data/originals/debt-gdp-percentage.csv"
+debt_output = "data/output/debt-gdp-percentage.csv"
 
 
-	wb = WBStandardizer()
+wb = WBStandardizer()
 
-	wb.standardize_tables(inflation_input, inflation_output)
-	wb.standardize_tables(debt_input, debt_output)
+wb.standardize_tables(inflation_input, inflation_output)
+wb.standardize_tables(debt_input, debt_output)
 
-	print "Success!"
+print "Success!"
 ```
 
 1. Considerations: Note that starter.py has all the specific context about file location.
@@ -298,20 +297,20 @@ let's read it together.
 1. Copy/paste from the sample code into your `starter.py` (comment out the other stuff):
 	
 ```python
-	import pycountry
-	germany = pycountry.countries.get(alpha2='DE')
-	print germany.alpha3
+import pycountry
+germany = pycountry.countries.get(alpha2='DE')
+print germany.alpha3
 ```
 
 1. Validate that pycountry does what you want. (Copy/paste):
 	
 ```python
-	import pycountry
+import pycountry
 
-	germany = pycountry.countries.get(alpha2='DE')
+germany = pycountry.countries.get(alpha2='DE')
 
-	alpha3 = germany.alpha3
-	alpha2 = germany.alpha2
+print germany.alpha3
+print germany.alpha2
 ```
 
 1. OK. Now that we've validated that this works, what kind of function do we want to write?
@@ -319,21 +318,21 @@ let's read it together.
 1. We want to write a function where argument is one type (alpha3), output is other type (alpha2).
 
 ```python	
-	def translate_country_code(self, alpha3_code):
-		country = pycountry.countries.get(alpha3=alpha3_code)
-		return country.alpha2
+def translate_country_code(self, alpha3_code):
+	country = pycountry.countries.get(alpha3=alpha3_code)
+	return country.alpha2
 ```
 
 
 1. Handle case where there is no match:
 	
 ```python
-	def translate_country_code(self, alpha3_code):
-		try:
-			country = pycountry.countries.get(alpha3=alpha3_code)
-			return country.alpha2
-		except:
-			return "**"
+def translate_country_code(self, alpha3_code):
+	try:
+		country = pycountry.countries.get(alpha3=alpha3_code)
+		return country.alpha2
+	except:
+		return "**"
 ```			
 
 
@@ -345,41 +344,41 @@ let's read it together.
 1. We will replace country code before writing it.
 
 ```python
-	import csv
-	import pycountry
+import csv
+import pycountry
 
-		class WBStandardizer():
+class WBStandardizer():
 
-			def standardize_tables(self, inpath, outpath):
-				
-				freader = open(inpath, 'rU')
-				self.skip_lines(freader, 4)
-				reader = csv.DictReader(freader)
+	def standardize_tables(self, inpath, outpath):
+		
+		freader = open(inpath, 'rU')
+		self.skip_lines(freader, 4)
+		reader = csv.DictReader(freader)
 
-				fields = ["Country Code"]
+		fields = ["Country Code"]
 
-				for year in range(1960, 2015):
-					fields.append(str(year))
+		for year in range(1960, 2015):
+			fields.append(str(year))
 
-				fwriter = open(outpath, 'w')
-				writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
-				writer.writeheader()
+		fwriter = open(outpath, 'w')
+		writer = csv.DictWriter(fwriter, fields, extrasaction="ignore")
+		writer.writeheader()
 
-				for row in reader:
-					row["Country Code"] = self.translate_country_code(row["Country Code"])
-					writer.writerow(row)
+		for row in reader:
+			row["Country Code"] = self.translate_country_code(row["Country Code"])
+			writer.writerow(row)
 
 
-			def skip_lines(self, fp, numlines):	
-				for i in range(numlines):
-				    fp.next()
+	def skip_lines(self, fp, numlines):	
+		for i in range(numlines):
+		    fp.next()
 
-			def translate_country_code(self, alpha3_code):
-				try:
-					country = pycountry.countries.get(alpha3=alpha3_code)
-					return country.alpha2
-				except:
-					return "**"
+	def translate_country_code(self, alpha3_code):
+		try:
+			country = pycountry.countries.get(alpha3=alpha3_code)
+			return country.alpha2
+		except:
+			return "**"
 ```
 
 
